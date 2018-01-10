@@ -1,0 +1,40 @@
+<p class="nav-text pull-right">
+  <% if user_signed_in? %>
+  Logged in as <strong> <%= current_user.email %> </strong>
+  <%= link_to 'Edit Profile',edit_user_registration_path,:class=>'navbar-link'%>
+  <%= link_to 'Logout',destroy_user_session_path,method: :delete, :class=>'navbar-link' %>
+  <% else %>
+  <%= link_to "sign up",new_user_registration_path,:class=>'navbar-link' %>
+  <%= link_to"Login",new_user_session_path,:class=>'navbar-link'%>
+  <% end %>
+</p>
+
+
+
+
+<nav class="navbar navbar-inverse" id="mainNav">
+      <div class="container">
+      
+        <button class="navbar-toggle " type=button" data-toggle="collapse" data-target="#navbarResponsive" >
+          <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Once Upon A Time </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Anasayfa</a></li>
+        <li><a href="#">Oyuncular</a></li>
+        <li><a href="#">Sezonlar</a></li>
+        <li><a href="#">Sosyal Medya</a></li>
+      </ul>
+          
+            
+          <ul class="nav navbar-nav navbar-center">
+        
+      </ul>
+        </div>
+      </div>
+    </nav>
+   
